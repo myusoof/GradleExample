@@ -6,6 +6,9 @@ buildSrc
 *.iws
 .gradle
 .gitignore
+module.xml
+profiles_settings.xml
+scope_settings.xml
 *IS_UNDEFINED
 *.class
 
