@@ -1,0 +1,13 @@
+# buildSrc symlink
+buildSrc
+
+*.iml
+*.ipr
+*.iws
+.gradle
+.gitignore
+*IS_UNDEFINED
+*.class
+
+build
+out
