@@ -1,2 +1,4 @@
 apply plugin: 'groovy'
 apply plugin: 'java'
+
+println "test"
