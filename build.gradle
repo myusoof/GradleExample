@@ -1,6 +1,6 @@
+apply plugin : 'idea'
 apply plugin : 'java'
 apply plugin : 'groovy'
-apply plugin : 'idea'
 
 repositories {
     mavenCentral()
@@ -8,8 +8,15 @@ repositories {
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.1.6'
-    runtime fileTree(dir: "src/libs", include: "*.jar")
+    //runtime fileTree(dir: "src/libs", include: "*.jar")
 }
-
-sourceSets.main.groovy.srcDirs = ['src', 'src/yusoof', 'src/main/groovy']
+//sourceCompatibility = JavaVersion.VERSION_1_7
+/*
+sourceCompatibility =
+sourceSets.main.groovy.srcDirs = ['src','src/yusoof', 'src/main/groovy']
+sourceSets.main.java.srcDirs = ['src','src/yusoof', 'src/main/groovy']
 sourceSets.test.groovy.srcDirs = ['src/test/yusoof','src/test/groovy']
+*/
+sourceSets.test.groovy.srcDirs = ['src/test/java','src/test/groovy','src/test/yusoof']
+//sourceSets.test.groovy.srcDirs = ['test/java']
+sourceSets.main.groovy.srcDirs = ['src/main/groovy']
