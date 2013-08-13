@@ -1,2 +1,15 @@
 apply plugin : 'java'
+apply plugin : 'groovy'
 apply plugin : 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.1.6'
+    runtime fileTree(dir: "src/libs", include: "*.jar")
+}
+
+sourceSets.main.groovy.srcDirs = ['src', 'src/yusoof', 'src/main/groovy']
+sourceSets.test.groovy.srcDirs = ['src/test/yusoof','src/test/groovy']
