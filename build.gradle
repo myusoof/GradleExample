@@ -10,13 +10,30 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.1.6'
     //runtime fileTree(dir: "src/libs", include: "*.jar")
 }
-//sourceCompatibility = JavaVersion.VERSION_1_7
-/*
-sourceCompatibility =
-sourceSets.main.groovy.srcDirs = ['src','src/yusoof', 'src/main/groovy']
-sourceSets.main.java.srcDirs = ['src','src/yusoof', 'src/main/groovy']
-sourceSets.test.groovy.srcDirs = ['src/test/yusoof','src/test/groovy']
-*/
-sourceSets.test.groovy.srcDirs = ['src/test/java','src/test/groovy','src/test/yusoof']
-//sourceSets.test.groovy.srcDirs = ['test/java']
-sourceSets.main.groovy.srcDirs = ['src/main/groovy']
+
+println "yusoof"
+class GradleExam{
+    String var1
+    String var2
+
+    public GradleExam(String var1, String var2){
+           this.var1 = var1
+           this.var2 = var2
+           println var1 + " " + var2
+
+    }
+
+    void method1(){
+        println this.var1
+        println System.getProperties()
+        println ''
+
+        println System.getProperty("java.runtime.name")
+    }
+}
+
+extensions.create('gradleexample', GradleExam, 'constructor variable', 'constructor variable 2')
+
+task testTask << {
+    gradleexample.method1()
+}
