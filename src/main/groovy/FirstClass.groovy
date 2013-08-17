@@ -7,7 +7,7 @@
  */
 class FirstClass {
     public FirstClass(){
-
+     println "string from the constructor"
     }
     public String firstClassMethod(){
         println "String from the first class method"
