@@ -8,6 +8,7 @@ repositories {
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.1.6'
+    testCompile 'org.testng:testng:6.8.1'
     //runtime fileTree(dir: "src/libs", include: "*.jar")
 }
 
@@ -36,4 +37,8 @@ extensions.create('gradleexample', GradleExam, 'constructor variable', 'construc
 
 task testTask << {
     gradleexample.method1()
+}
+
+task toRun << {
+
 }
