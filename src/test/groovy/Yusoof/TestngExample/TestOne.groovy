@@ -1,3 +1,6 @@
+package Yusoof.TestngExample
+
+import org.testng.annotations.Parameters
 import org.testng.annotations.Test
 
 /**
@@ -8,6 +11,12 @@ import org.testng.annotations.Test
  * To change this template use File | Settings | File Templates.
  */
 class TestOne {
+
+    @Parameters(["baseUrl"])
+    @Test()
+    void parameterTest(String baseUrl){
+        println baseUrl
+    }
 
     @Test
     void testOneMethod(){
