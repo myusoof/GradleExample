@@ -39,6 +39,29 @@ task testTask << {
     gradleexample.method1()
 }
 
-task toRun << {
+def functionalTest = { String baseServiceUrl ->
+    description = 'Use this task to run acceptance tests against Local(localhost) environment'
+    useTestNG() {
+        suiteXmlBuilder().suite(name: 'functional-tests') {
+            if (baseServiceUrl) {
+                println "base service url is available ${baseServiceUrl}"
+//                parameter(name: "baseServiceUrl", value: baseServiceUrl)
 
+            }
+            /*test(name: "all") {
+                packages {
+                    'package'(name: 'uk.co.o2.*')
+                }
+            }*/
+        }
+    }
+    inputs.property("alwaysExecute", java.util.UUID.randomUUID())
+}
+
+sourceSets.main.groovy.srcDirs = ['src/main/groovy']
+
+
+task toRun(type: Test){
+    functionalTest.delegate = delegate
+    functionalTest("Hitesh")
 }
