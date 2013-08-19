@@ -21,5 +21,6 @@ class TestOne {
     @Test
     void testOneMethod(){
         println "test"
+
     }
 }

@@ -5,9 +5,14 @@ apply plugin : 'groovy'
 repositories {
     mavenCentral()
 }
-
+jacksonVersion="2.2.2"
+jackson = [ "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}", "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}", "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"]
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.1.6'
+    testCompile(group: 'org.codehaus.groovy.modules.http-builder', name: 'http-builder', version: '0.5.1'){
+        exclude module: 'groovy'
+    }
+    testCompile jackson
     testCompile 'org.testng:testng:6.8.1'
     //runtime fileTree(dir: "src/libs", include: "*.jar")
 }
