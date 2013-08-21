@@ -1,5 +1,6 @@
 package Yusoof.TestngExample
 
+import org.apache.http.client.HttpClient
 import org.testng.annotations.Parameters
 import org.testng.annotations.Test
 
@@ -15,6 +16,7 @@ class TestOne {
     @Parameters(["baseUrl"])
     @Test()
     void parameterTest(String baseUrl){
+
         println baseUrl
     }
 
