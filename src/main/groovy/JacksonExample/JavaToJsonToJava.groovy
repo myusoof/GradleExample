@@ -1,5 +1,7 @@
 package JacksonExample
 
+import com.fasterxml.jackson.core.JsonFactory
+import com.fasterxml.jackson.core.json.PackageVersion
 import com.fasterxml.jackson.databind.ObjectMapper
 
 /**
@@ -11,6 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
  */
 class JavaToJsonToJava {
     public static void main(String ...args){
+        JsonFactory jsonFactory = new JsonFactory()
         ObjectMapper objectMapper = new ObjectMapper()
         User user = new User()
         user.name = "yusoof"
@@ -24,6 +27,13 @@ class JavaToJsonToJava {
         println user1.salary
         println user1.name
         println user1.age
+        //----------------------------------
+        println PackageVersion.VERSION
+        if( jsonFactory.version() == "2.2.2"){
+            println "This is not the lastest version of json"
+        }   else{
+            println "This is the lastest version of jackson"
+        }
     }
 
 }
