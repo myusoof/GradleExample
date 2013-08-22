@@ -21,6 +21,9 @@ class JavaToJsonToJava {
         user.salary = 8000000
         user.address = "no 5, seven wells st, seven wells, chennai -1"
         objectMapper.writeValue(new File("./user.json"), user)
+        println "--------------"
+        println objectMapper.writeValueAsString(user)
+        println "--------------"
 
         User user1 = objectMapper.readValue(new File("./user.json"), User.class)
         println user1.address
@@ -31,7 +34,7 @@ class JavaToJsonToJava {
         println PackageVersion.VERSION
         if( jsonFactory.version() == "2.2.2"){
             println "This is not the lastest version of json"
-        }   else{
+        }   else {
             println "This is the lastest version of jackson"
         }
     }
