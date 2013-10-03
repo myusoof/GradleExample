@@ -2,8 +2,9 @@
 <parameter name="baseUrl"  value="YusoofOneTWoThree"/>
     <listeners>
         <listener class-name="Yusoof.TestngExample.SuiteListener.ListenerExample"/>
+        <listener class-name="Yusoof.TestngExample.SuiteListener.ListenerExample"/>
     </listeners>
-<test name = "yusoofTest">
+<test name = "yusoofTest" preserve-order = "true">
     <packages>
         <package name = "Yusoof.TestngExample" />
     </packages>
