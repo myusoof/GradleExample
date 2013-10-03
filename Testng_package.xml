@@ -1,12 +1,12 @@
 <suite name='TestNG JDK 1.5' parallel='true' thread-count='5'>
-<parameter name="baseUrl"  value="YusoofOneTWoThree"/>
-    <listeners>
-        <listener class-name="Yusoof.TestngExample.SuiteListener.ListenerExample"/>
-        <listener class-name="Yusoof.TestngExample.SuiteListener.ListenerExample"/>
-    </listeners>
-<test name = "yusoofTest" preserve-order = "true">
-    <packages>
-        <package name = "Yusoof.TestngExample" />
-    </packages>
-</test>
+    <parameter name="baseUrl"  value="YusoofOneTWoThree"/>
+        <listeners>
+            <listener class-name="Yusoof.TestngExample.SuiteListener.ListenerExample"/>
+            <listener class-name="Yusoof.TestngExample.SuiteListener.ListenerExample"/>
+        </listeners>
+    <test name = "yusoofTest" preserve-order = "true">
+        <packages>
+            <package name = "Yusoof.TestngExample" />
+        </packages>
+    </test>
 </suite>
