@@ -1,4 +1,6 @@
-<suite name='TestNG JDK 1.5' parallel='true' thread-count='5'>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name='TestNG JDK 1.5' parallel= 'true' thread-count='5'>
     <parameter name="baseUrl"  value="YusoofOneTWoThree"/>
         <listeners>
             <listener class-name="Yusoof.TestngExample.SuiteListener.ListenerExample"/>
