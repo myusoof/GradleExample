@@ -1,0 +1,13 @@
+<suite name = 'YusoofExample'>
+    <parameter name="baseUrl"  value="YusoofOneTWoThree"/>
+    <test name = "Riyaz">
+        <classes>
+            <class name = 'Yusoof.TestngExample.TestngExample1' />
+        </classes>
+    </test>
+    <test name = "jasmine">
+        <classes>
+            <class name = 'Yusoof.TestngExample.TestngExample1' />
+        </classes>
+    </test>
+</suite>
