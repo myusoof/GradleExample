@@ -1,0 +1,11 @@
+<suite name='TestNG JDK 1.5' parallel='true' thread-count='5'>
+<parameter name="baseUrl"  value="YusoofOneTWoThree"/>
+    <listeners>
+        <listener class-name="Yusoof.TestngExample.SuiteListener.ListenerExample"/>
+    </listeners>
+<test name = "yusoofTest">
+    <packages>
+        <package name = "Yusoof.TestngExample" />
+    </packages>
+</test>
+</suite>
