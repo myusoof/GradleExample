@@ -69,3 +69,10 @@ task toRun(type: Test){
     functionalTest.delegate = delegate
     functionalTest(null)
 }
+
+
+/*
+servicesSchema = "uk.co.o2.services:schemas:1.0-SNAPSHOT"
+servicesTestCommon = "uk.co.o2.services:test-common:1.1-SNAPSHOT"
+
+*/
